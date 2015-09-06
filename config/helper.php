@@ -1,7 +1,8 @@
 <?php
+header("Content-Type:application/json");
 require_once("config.php");
 
-Class helper
+Class Helper
 {
 	public function connectDB()
 	{
@@ -50,8 +51,12 @@ Class helper
 		return $result;
 	}
 
-	public function formatError($message)
+	public function formatError($message,$errorcode=NULL)
 	{
+		if(!empty($errorcode))
+		{
+			http_response_code($errorcode);
+		}
 		return array("error"=>$message);
 	}
 }

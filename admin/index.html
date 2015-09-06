@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset=utf-8>
+        <title>Versatile Metro-UI Angular Theme</title>
+        <meta name=description>
+        <meta name=viewport content="width=device-width">
+        <link rel=stylesheet href="styles/vendor.css">
+        <link rel=stylesheet href="styles/main.css">
+        <link rel=stylesheet href="styles/magic.css">
+    </head>
+    <body ng-app="yapp" ng-controller="pageController">
+        <!--[if lt IE 7]>
+                        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <snap-drawer ng-show="loggedIn">
+    <div class="snap-menu">
+        <div class="sidebar-header text-center">
+            <img src=images/flat-avatar.png class="sidebar-img img-circle">
+        </div>
+        <ul class=snap-ul>
+            <li>
+                <a href="#/dashboard">HOME
+                </a>
+            </li>
+            <li>
+                <a href="#/users">USERS
+                </a>
+            </li>
+            <li>
+                <a href="#/advertisements">ADVERTISEMENTS
+                </a>
+            </li>
+            <li>
+                <a >LOGOUT
+                </a>
+            </li>
+        </ul>
+    </div>
+    </snap-drawer>
+    <!-- <snap-content snap-opt-tap-to-close=true>
+    <a snap-toggle=left ng-click="menuOpen = !menuOpen">
+    <span class=menutoggle>
+    <i ng-hide="menuOpen" class="fa fa-bars fa-2x">
+    </i>
+    <i ng-show="menuOpen" class="fa fa-times fa-2x">
+    </i>
+    </span>
+    </a>
+    <div class="fr container">
+        <h2>Overview
+        <small>Why is Versatile Theme so awesome?
+        </small>
+        </h2>
+    </div>
+    </snap-content> -->
+        <div ng-view style="height:100%" ng-class="slide">
+        	
+        </div>
+        <!--[if lt IE 9]>
+        <script src="scripts/oldieshim.js"></script>
+        <![endif]-->
+        <!-- <script src=scripts/vendor.js></script> -->
+        <script src="lib/angular/angular.min.js"></script>
+        <script src="lib/angular/snap.js"></script>
+        <script src="lib/angular/angular-route.min.js"></script>
+        <script src="lib/angular/angular-animate.js"></script>
+        <script src="lib/angular/angular-snap.js"></script>
+        <script src="scripts/scripts.js"></script>
+        <script src="../config/constants.js"></script>
+        <script src="scripts/login.js"></script>
+        <script src="scripts/dashboard.js"></script>
+        <script src="scripts/page.js"></script>
+        <script src="scripts/users.js"></script>
+    </body>
+</html>

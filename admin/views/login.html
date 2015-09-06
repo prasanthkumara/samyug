@@ -1,0 +1,35 @@
+<div ng-controller="LoginCtrl" class="login-page">
+    <div class=img-container>
+        <div class="text-center pull-right photo magictime slideUpRetourn">
+            <img src=images/flat-avatar.png class="user-avatar img-circle img-responsive">
+            <h1>DASHBOARD<br>
+            </h1>
+        </div>
+    </div>
+    <div class="form-content magictime slideRightRetourn">
+        <form role=form class=bottom-75 ng-submit=submit()>
+        	<span ng-show="invalidDetails">{{message}}</span>
+            <div class=table-form>
+                <div class=form-groups>
+                    <div class=form-group>
+                        <input type=text class="form-control input-lg" ng-model="email" placeholder=EMAIL>
+                    </div>
+                    <div class=form-group>
+                        <input type=password class="form-control input-lg" ng-model="password" placeholder=PASSWORD>
+                    </div>
+                </div>
+                <div class=button-container>
+                    <button type=submit class="btn btn-default login">
+                    <img src=images/arrow.png>
+                    </button>
+                </div>
+            </div>
+            <div class=remember>
+                <label class=checkbox1 for=Option>
+                    <input id="Option" type="checkbox">
+                    <span></span>
+                </label> remember me <span class=pass> forgot password?</span>
+            </div>
+        </form>
+    </div>
+</div>
